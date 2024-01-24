@@ -80,12 +80,7 @@ class CustomerController extends Controller
      */
     public function update(Request $request,$id)
     {
-        // $request->validate([
-        //     'customer_name' => 'required',
-        //     'cell_no' =>'required',
-        //     'box_no' =>'required',
-        //     'amount' =>'required',
-        // ]);
+       
         $customer = Customer::find($id);
         $customer->customer_name=$request->customer_name;
         $customer->cell_no=$request->cell_no;
